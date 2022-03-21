@@ -1,4 +1,4 @@
-token: "lip_wDzDPU66qxgxZGvyj0sB"    # Lichess OAuth2 Token.
+token: "lip_EfuPhqgsHnM7h4c9sROP"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -37,11 +37,11 @@ engine:                      # Engine settings.
       min_depth: 30            # Only for move_quality: "best"
       contribute: false
     lichess_cloud_analysis:
-      enabled: false
+      enabled: true
       min_time: 20
       move_quality: "best"     # One of "good", "best"
       max_score_difference: 50 # Only for move_quality: "good". The maximum score difference (in cp) between the best move and the other moves.
-      min_depth: 30
+      min_depth: 35
       min_knodes: 0
     online_egtb:
       enabled: true
@@ -73,7 +73,7 @@ rate_limiting_delay: 0       # Time (in ms) to delay after sending a move to pre
 
 uci_options:               # Arbitrary UCI options passed to the engine.
     Move Overhead: 500        # Increase if your bot flags games too often.
-    Threads: 2               # Max CPU threads the engine can use.
+    Threads: 3               # Max CPU threads the engine can use.
     Hash: 256                # Max memory (in megabytes) the engine can allocate.
     SyzygyPath: ./syzygy
     SyzygyProbeDepth: 50
